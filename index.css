@@ -1,0 +1,43 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+body {
+    background: grey;
+}
+   
+}
+.container {
+    margin: 70;
+    display: flex;
+    justify-content: center;
+    gap:50px;
+
+}
+
+
+.box-head {
+    display: flex;
+    width: 350px;
+    height: 800px;
+    background: pink;
+    margin-top: 50px;
+    justify-content: space-between;
+    padding: 20px;
+    border: 20px;
+    border-radius: 15px;
+}
+
+.btn {
+    width: 109px;
+    height: 44px;
+    margin: 30px;
+    padding: 0, 20;
+    border: 20px;
+    background: green;
+    color: white;
+    
+}
+
+.btn-container {
+    
+}
