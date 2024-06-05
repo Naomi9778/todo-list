@@ -89,6 +89,8 @@ const createBoard = (Text, Count) => {
   circle.className = "circle";
   count.innerText = Count;
   headerText.innerText = Text;
+  list.className = 'list';
+
 
   headerTitle.appendChild(circle);
   headerTitle.appendChild(headerText);
@@ -98,24 +100,36 @@ const createBoard = (Text, Count) => {
   board.appendChild(list);
   body.appendChild(board);
 };
-
-const createTask = () => {
-  const list = document.getElementsByClassName("list")[0];
-  const task = document.createElement("div");
-  const text = document.createElement("p");
-  const edit = document.createElement("div");
-  const remove = document.createElement("div");
-
-  edit.innerHTML = editSvg;
-  remove.innerHTML = removeSvg;
-
-  list.appendChild(task);
-  body.appendChild(list)
-};
-
 createBoard('To Do', '5')
 createBoard('In progress', '5')
 createBoard('Done', '5')
 createBoard('Blocked', '5')
 
-createTask()
+const createTask = (desc) => {
+    const list = document.getElementsByClassName("list")[0];
+    const task = document.createElement("div");
+    const circle = document.createElement("div");
+    const text = document.createElement("p");
+    const edit = document.createElement("div");
+    const remove = document.createElement("div");
+  
+    task.className = "task";
+    circle.classList.add('circle');
+    circle.classList.add('black');
+    text.className = 'text';
+    text.innerText = desc;
+    edit.innerHTML = editSvg;
+    remove.innerHTML = removeSvg;
+  
+    task.appendChild(circle);
+    task.appendChild(text);
+    task.appendChild(edit);
+    task.appendChild(remove);
+    list.appendChild(task);
+  };
+  
+
+createTask('hello world1');
+createTask('hello world1');
+createTask('hello world1');
+createTask('hello world1');

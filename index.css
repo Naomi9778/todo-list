@@ -117,3 +117,9 @@ body {
   border: 1px solid white;
   background: #000;
 }
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
