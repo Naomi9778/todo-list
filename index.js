@@ -100,10 +100,35 @@ const createBoard = (Text, Count) => {
   board.appendChild(list);
   body.appendChild(board);
 };
-createBoard('To Do', '5')
-createBoard('In progress', '5')
-createBoard('Done', '5')
-createBoard('Blocked', '5')
+const board = [
+  {
+      title : 'To Do', 
+      bgColor: 'green',
+  },
+  {
+      title : "in Progress",
+      bgColor : "yellow",
+  },
+  {
+      title : "Done",
+      bgColor : "green",
+  },
+  {
+      title : "Blocked",
+      bgColor : "red",
+  },
+
+
+]
+
+board.map((el) => {
+  createBoard(el.title, el.bgColor,5);
+}
+)
+// createBoard('To Do', '5')
+// createBoard('In progress', '5')
+// createBoard('Done', '5')
+// createBoard('Blocked', '5')
 
 const createTask = (desc) => {
     const list = document.getElementsByClassName("list")[0];
@@ -130,4 +155,5 @@ const createTask = (desc) => {
   
 
 createTask('hello world');
+
 
